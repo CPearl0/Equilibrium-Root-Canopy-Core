@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "io.github.cpearl0.erccore.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "mixins.erccore.refmap.json",
+  "mixins": [],
+  "client": [],
+  "minVersion": "0.8"
+}
