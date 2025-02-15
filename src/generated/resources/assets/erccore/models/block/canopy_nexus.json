@@ -1,0 +1,6 @@
+{
+  "parent": "erccore:block/stabilizer_block",
+  "textures": {
+    "all": "erccore:block/canopy_nexus"
+  }
+}

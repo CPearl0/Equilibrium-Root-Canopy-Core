@@ -4,6 +4,7 @@ plugins {
     id 'idea'
     id 'maven-publish'
     id 'net.neoforged.gradle.userdev' version '7.0.170'
+    id 'io.freefair.lombok' version '8.12.1'
 }
 
 tasks.named('wrapper', Wrapper).configure {

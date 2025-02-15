@@ -12,12 +12,13 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ERCCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ERCCore.MODID);
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("itemGroup.erccore")) //The language key for the title of your CreativeModeTab
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register("main_tab", () -> CreativeModeTab.builder()
+            .title(Component.translatable("itemGroup.erccore.main_tab"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            //.icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
+            .icon(() -> ERCItems.ROOT_CORE.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
-            //    output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+                output.accept(ERCItems.ROOT_CORE.get());
+                output.accept(ERCItems.CANOPY_NEXUS.get());
             }).build());
 
     public static void register(IEventBus eventBus) {
