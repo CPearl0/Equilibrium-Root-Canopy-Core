@@ -1,6 +1,8 @@
 package io.github.cpearl0.erccore.content.block;
 
+import io.github.cpearl0.erccore.registry.ERCAttachmentTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -17,5 +19,12 @@ public class StabilizerBlock extends Block implements EntityBlock {
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new StabilizerBlockEntity(pos, state);
+    }
+
+    @Override
+    protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
+        super.onPlace(state, level, pos, oldState, movedByPiston);
+        var chunk = level.getChunkAt(pos);
+        chunk.getData(ERCAttachmentTypes.CHUNK_STABILIZER_INFO).stabilizerPos[element] = new BlockPos(pos);
     }
 }

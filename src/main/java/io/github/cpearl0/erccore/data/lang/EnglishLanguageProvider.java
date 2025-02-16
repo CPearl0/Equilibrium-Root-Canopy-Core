@@ -16,5 +16,7 @@ public class EnglishLanguageProvider extends LanguageProvider {
         add("itemGroup.erccore.main_tab", "Equilibrium: Root & Canopy");
         addBlock(ERCBlocks.ROOT_CORE, "Root Core");
         addBlock(ERCBlocks.CANOPY_NEXUS, "Canopy Nexus");
+
+        add("info.erc.too_many_stabilizer", "Too many stabilizers in the chunk! Immediately break all the stabilizers in the chunk!");
     }
 }

@@ -1,9 +1,6 @@
 package io.github.cpearl0.erccore;
 
-import io.github.cpearl0.erccore.registry.ERCBlockEntityTypes;
-import io.github.cpearl0.erccore.registry.ERCBlocks;
-import io.github.cpearl0.erccore.registry.ERCCreativeTabs;
-import io.github.cpearl0.erccore.registry.ERCItems;
+import io.github.cpearl0.erccore.registry.*;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -26,6 +23,7 @@ public class ERCCore {
         ERCBlocks.register(modEventBus);
         ERCBlockEntityTypes.register(modEventBus);
         ERCCreativeTabs.register(modEventBus);
+        ERCAttachmentTypes.register(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
