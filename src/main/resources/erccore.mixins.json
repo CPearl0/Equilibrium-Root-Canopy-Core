@@ -4,6 +4,8 @@
   "compatibilityLevel": "JAVA_21",
   "refmap": "mixins.erccore.refmap.json",
   "mixins": [],
-  "client": [],
+  "client": [
+    "MinecraftClientMixin"
+  ],
   "minVersion": "0.8"
 }
