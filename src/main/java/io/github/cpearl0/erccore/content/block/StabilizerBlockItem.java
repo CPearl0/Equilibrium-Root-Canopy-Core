@@ -25,7 +25,7 @@ public class StabilizerBlockItem extends BlockItem {
         if (pos != null &&
                 chunk.getBlockState(pos).getBlock() instanceof StabilizerBlock stabilizer &&
                 element == stabilizer.element)
-            context.getPlayer().sendSystemMessage(Component.translatable("Don't do that"));
+            context.getPlayer().sendSystemMessage(Component.translatable("info.erc.too_many_stabilizer"));
         return res;
     }
 }

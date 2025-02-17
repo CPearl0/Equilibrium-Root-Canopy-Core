@@ -1,5 +1,6 @@
 {
   "block.erccore.canopy_nexus": "Canopy Nexus",
   "block.erccore.root_core": "Root Core",
+  "info.erc.too_many_stabilizer": "Too many stabilizers in the chunk! Immediately break all the stabilizers in the chunk!",
   "itemGroup.erccore.main_tab": "Equilibrium: Root & Canopy"
 }
