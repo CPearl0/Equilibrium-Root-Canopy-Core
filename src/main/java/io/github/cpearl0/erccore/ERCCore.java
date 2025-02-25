@@ -25,6 +25,8 @@ public class ERCCore {
         ERCCreativeTabs.register(modEventBus);
         ERCAttachmentTypes.register(modEventBus);
 
+        ERCTotemicAddons.register(modEventBus);
+
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 }
